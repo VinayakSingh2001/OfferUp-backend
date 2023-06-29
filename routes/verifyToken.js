@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+const jwt =  require("jsonwebtoken");
 
 const verifyToken = (req, res, next) => {
     const authHeader = req.headers.token;
@@ -10,7 +10,7 @@ const verifyToken = (req, res, next) => {
         next();
       });
     } else {
-      return res.status(401).json("You are not authenticated!");
+       return res.status(401).json("You are not authenticated!");
     }
   };
 
@@ -25,4 +25,4 @@ const verifyTokenAndAuthorization = (req, res, next) => {
   };
 
 
-  module.exports = { verifyToken,verifyTokenAndAuthorization}
+  module.exports = { verifyToken,verifyTokenAndAuthorization};
